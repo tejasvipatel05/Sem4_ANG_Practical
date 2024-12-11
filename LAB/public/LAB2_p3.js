@@ -1,0 +1,15 @@
+"use strict";
+let s = "Bangtan Sonyeondan";
+console.log("String: ", s);
+console.log("Length: ", s.length);
+console.log("Ends with an: ", s.endsWith("an"));
+console.log("Char at 4: ", s.charAt(4));
+console.log("After Concat: ", s.concat("JK immida.."));
+console.log("Last index of a: ", s.lastIndexOf("a"));
+console.log("Match: ", s.match("Son"));
+console.log("Replace: ", s.replace("Sonyeondan", "Boys"));
+console.log("In Lower case: ", s.toLowerCase());
+console.log("In Upper case: ", s.toUpperCase());
+console.log("Substring: ", s.substring(1, 5));
+console.log("Search q: ", s.search("q"));
+console.log("Search y: ", s.search("y"));

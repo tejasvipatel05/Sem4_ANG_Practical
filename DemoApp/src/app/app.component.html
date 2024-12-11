@@ -1,0 +1,15 @@
+<h1>{{title | uppercase}}</h1>
+
+<h3>{{d | date:'M/d/yyyy'}}</h3>
+
+<h3>{{d | date:'shortDate'}}</h3>
+
+<h3>{{num | number:'3.2' }}</h3>
+
+<form action="#">
+  <input type="text" id="data" [value]="title" #data>
+  <h4>{{data.value}}</h4>
+  <button [ngstyle]="{color: host}">Change color</button>
+</form>
+
+<button [disabled] = 'isEnable' >{{title}}</button>

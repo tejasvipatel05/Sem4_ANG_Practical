@@ -1,0 +1,11 @@
+"use strict";
+// Type Assertion
+let here;
+here = 'This is a statement';
+console.log("Type is: ", typeof (here));
+console.log("Value is: ", here);
+console.log("Length is: ", here.length);
+here = 10;
+console.log("Type is: ", typeof (here));
+console.log("Value is: ", here);
+console.log("Number is: ", here);
