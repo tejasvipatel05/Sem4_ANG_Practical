@@ -1,0 +1,45 @@
+<button class="btn btn-warning" (click)="switchCartoon()">Switch Cartoon</button>
+
+
+
+<button class="btn btn-outline-info" (click)="switchOn()">Switch On</button>
+
+<button class="btn btn-outline-info" (click)="switchOff()">Switch Off</button>
+
+<br/><br/>
+Enter number of month: <input class="border-info" type="number" [(ngModel)]="month">
+<br/>
+
+<div [ngSwitch]="month">
+    <div *ngSwitchCase="1">January</div>
+    <div *ngSwitchCase="2">February</div>
+    <div *ngSwitchCase="3">March</div>
+    <div *ngSwitchCase="4">April</div>
+    <div *ngSwitchCase="5">May</div>
+    <div *ngSwitchCase="6">July</div>
+    <div *ngSwitchCase="7">June</div>
+    <div *ngSwitchCase="8">August</div>
+    <div *ngSwitchCase="9">September</div>
+    <div *ngSwitchCase="10">October</div>
+    <div *ngSwitchCase="11">November</div>
+    <div *ngSwitchCase="12">December</div>
+    <div *ngSwitchDefault="0">Enter Valid number</div>
+</div>
+<br>
+
+Enter number: <input class="border-info" type="number" [(ngModel)]="count">
+<br/><br/>
+
+<span *ngFor="let n of numSequence(count); 
+           let i = index;">
+    <div class="box" [ngStyle]="mulstyle">
+        <h3 *ngIf="cartoon else elseBlock">Tom & Jerry</h3>
+    
+    <ng-template #elseBlock>
+        <h3>Chhota Bheem</h3>
+    </ng-template>
+    </div>
+</span>
+
+<div [ngClass]="'first second'">Helloooo</div>
+<div [ngClass]="['first','second']">Helloooo</div>

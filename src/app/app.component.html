@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home" routerLinkActive="activeLink">AngPracticals</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="resumebuilder" routerLinkActive="activeLink">Resume Builder</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Array
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="array" routerLinkActive="activeLink">Single Dimensional</a></li>
+            <li><a class="dropdown-item" routerLink="arrayofobject" routerLinkActive="activeLink">Multi Dimensional</a></li>
+            <!-- <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="array" routerLinkActive="activeLink">Array</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="arrayofobject" routerLinkActive="activeLink">Array of Objects</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="directive" routerLinkActive="activeLink">Directive</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Forms
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="templatedriven" routerLinkActive="activeLink">Template Driven Form</a></li>
+            <li><a class="dropdown-item" routerLink="reactiveform" routerLinkActive="activeLink">Reactive Form</a></li>
+            <li><a class="dropdown-item" routerLink="formbuilder" routerLinkActive="activeLink">Form Builder</a></li>
+            <!-- <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="authentication" routerLinkActive="activeLink">Authentication</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="templatedriven" routerLinkActive="activeLink">Template Driven Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="reactivefrom" routerLinkActive="activeLink">Reactive Form</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+  <router-outlet/>
+</body>

@@ -1,0 +1,144 @@
+<h1 class="text-center text-black">Resume Builder</h1>
+<!-- <div class="ms-3 bg-info bg-opacity-10 border border-info rounded">
+    <fieldset class="ms-3 mb-3">
+      <legend class="fw-medium text-body-secondary">Personal Details:</legend>
+      <div class="row mb-2">
+        <div class="col-3">
+            <label class="col-form-label">Student Name:</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" class="form-control" placeholder="Student Name">
+        </div>
+      </div>
+      <div class="mb-3 row align-items-center">
+        <label class="col-5 col-form-label">Password</label>
+        <div class="col-auto">
+          <input type="password" class="form-control">
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</div> -->
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-6 data">
+          <table cellpadding="10">
+              <tr>
+                  <td colspan="2"><h4>Your Details:</h4></td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="fullName" class="form-label">Full Name:</label>
+                  </td>
+                  <td class="px-5">
+                      <input type="text" class="form-control" name="name" id="fullName" placeholder="Enter your full name"
+                          (input)="fillData($event)">
+                  </td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="inputEmail" class="form-label">Email address: </label>
+                  </td>
+                  <td class="px-5">
+                      <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Enter your Email"
+                          (input)="fillData($event)">
+                  </td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="phoneno" class="form-label">Phone no: </label>
+                  </td>
+                  <td class="px-5">
+                      <input type="text" class="form-control" name="phone" id="phoneno" placeholder="Enter your Phone no."
+                          (input)="fillData($event)">
+                  </td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="dob" class="form-label">Date of Birth: </label>
+                  </td>
+                  <td class="px-5">
+                      <input type="date" class="form-control" name="dob" id="dob" placeholder="Enter your Birthdate"
+                          (input)="fillData($event)">
+                  </td>
+              </tr>
+              <!-- <tr>
+                  <td class="px-5">
+                      <label for="summary" class="form-label">Summary: </label>
+                  </td>
+                  <td class="px-5">
+                      <textarea class="form-control" name="summary" id="summary" placeholder="Enter your summary" (input)="fillData($event)"></textarea>
+                  </td>
+              </tr> -->
+              <tr>
+                  <td colspan="2"><h4>Project Details:</h4></td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="title" class="form-label">Title: </label>
+                  </td>
+                  <td class="px-5">
+                      <input type="text" class="form-control" name="title" id="title" placeholder="Enter your project title"
+                          (input)="projectData($event)">
+                  </td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="description" class="form-label">Description: </label>
+                  </td>
+                  <td class="px-5">
+                      <textarea class="form-control" name="description" id="description" placeholder="Enter your project description" (input)="projectData($event)"></textarea>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="px-5">
+                      <label for="date" class="form-label">Starting Date: </label>
+                  </td>
+                  <td class="px-5">
+                      <input type="date" class="form-control" name="date" id="date"
+                          placeholder="Enter your project starting date" (input)="projectData($event)">
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="px-5">
+                      <input type="button" class="btn btn-info" value="submit" (click)="insertdata()">
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <div class="col-6 resume">
+          <div class="fname h1">{{stu.name}}</div>
+          <div style="background-color: black; height: 3px;"></div>
+          <div class="row mt-4">
+              <div class="col-4">
+                  <div class="h4">Contact</div>
+                  <div class="mt-2 fa fa-phone"><span class="ms-3">{{ stu.phone }}</span></div><br>
+                  <div class="mt-2 fa fa-envelope"><span class="ms-3">{{ stu.email }}</span></div><br>
+                  <div class="mt-2 fa fa-calendar"><span class="ms-3">{{ stu.dob }}</span></div><br>
+              </div>
+              <div class="col" style="border-left: 2px solid black; height: 100vh;">
+                  <!-- <div class="h4">Summary</div> -->
+                  <!-- <div class="sum">{{ stu.summary }}</div> -->
+                  
+                  <!-- <div style="background-color: black; height: 1px;" class="my-3"></div> -->
+                  <div class="h4">Project</div>
+                  <div class="">
+                      <ul type="none">
+                          <li *ngFor="let pr of project">
+                              <p class="mt-2" style="float: left;">{{ pr.title }}</p>
+                              <p class="mt-2" style="float: right;">{{ pr.date }}</p><br>
+                              <p class="" style="float: left;">{{ pr.description }}</p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
