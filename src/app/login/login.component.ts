@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
     private _fb = inject(FormBuilder);
-    private _rouer = inject(Router);
+    private _router = inject(Router);
 
     loginform:FormGroup=this._fb.group({
       username: [''],
@@ -24,7 +24,7 @@ export class LoginComponent {
       const localpassword = localStorage.getItem('password')
       
       if(this.loginform.get('username')?.value == localusername && this.loginform.get('password')?.value == localpassword){
-        this._rouer.navigate(['arrayofobject'])
+        this._router.navigate(['arrayofobject'])
       }
       else{
         alert("Username or Password not correct !!!")

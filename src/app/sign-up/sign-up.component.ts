@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent {
     private _fb = inject(FormBuilder);
-    private _rouer = inject(Router);
+    private _router = inject(Router);
 
     signupform:FormGroup=this._fb.group({
       username: [''],
@@ -24,6 +24,6 @@ export class SignUpComponent {
     onsignup(){
       localStorage.setItem('username',this.signupform.get('username')?.value);
       localStorage.setItem('password',this.signupform.get('password')?.value);
-      this._rouer.navigate(['loginform'])
+      this._router.navigate(['loginform'])
     }
 }
