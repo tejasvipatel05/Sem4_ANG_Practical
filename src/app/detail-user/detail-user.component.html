@@ -1,0 +1,32 @@
+<!-- <h1>{{data.full_name}}</h1>
+<img src="{{data.profile_picture}}" alt="profile">
+<button (click)="backToList()">Back</button> -->
+
+
+<div class="container">
+    <h1 class="text-center">User Details Mock API</h1>
+</div>
+
+<div class="container w-25">
+    <!-- <div class="row"> -->
+    <!-- <div class="col-md-4 mb-3"> -->
+    <div class="card  align-middle mt-4 border border-info rounded">
+        
+        <div class="card text-center">
+            <h5 class="card-title text-info pt-2">{{data.full_name}}</h5>
+            <img src="{{data.profile_picture}}" class="card img-top mx-5" alt="profile" [ngStyle]="{'height':'20rem'}">
+            <p class="card-text pt-2"><strong>Nick Name:</strong> {{ data.nick_name }}</p>
+            <p class="card-text"><strong>Email:</strong> {{data.email}}</p>
+            <p class="card-text"><strong>Phone No.:</strong> {{data.phone_number}}</p>
+            <p class="card-text"><strong>Address:</strong> {{data.address}}</p>
+
+            <div class="d-flex justify-content-between align-items-center px-3">
+                <button class="btn btn-outline-info mb-2 " (click)="backToList()">Go Back</button>
+                <button class="btn btn-outline-info mb-2 " (click)="updateNavigateUser(id)">Update</button>
+                <button class="btn btn-outline-info mb-2" (click)="deleteUser(id)">Delete</button>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+</div>

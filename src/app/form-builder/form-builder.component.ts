@@ -27,22 +27,26 @@ export class FormBuilderComponent {
 
     createAddress():FormGroup{
       return this._fb.group({
-        housename: [''],
-        streetname: [''],
-        city: [''],
-        pincode: [''],
-        state: ['']
-    })}
+        houseNo: ['', Validators.required],
+        streetNo: ['', Validators.required],
+        city: ['', Validators.required],
+        pincode: ['', [Validators.required, Validators.pattern('[0-9]{6}')]],
+      });
+    }
 
     addAddress(){
-      
+      this.StuAddArray.push(this.createAddress())
     }
 
-    addAddressControl(){
-      this.StudentForm.addControl('StuAddress', this._fb.control('',[Validators.required]))
+    removeAddress(id:number){
+      this.StuAddArray.removeAt(id)
     }
 
-    removeAddressControl(){
-      this.StudentForm.removeControl('StuAddress');
-    }
+    // addAddressControl(){
+    //   this.StudentForm.addControl('StuAddress', this._fb.control('',[Validators.required]))
+    // }
+
+    // removeAddressControl(){
+    //   this.StudentForm.removeControl('StuAddress');
+    // }
 }

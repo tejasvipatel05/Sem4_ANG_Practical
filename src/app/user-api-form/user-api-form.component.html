@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <h1>User API Form</h1>
+  </div>
+  <div class="container justify-content-center"></div>
+  <form [formGroup]="userForm">
+    <div class="ms-4 w-50">
+      <div class="mb-3">
+        <label class="form-label">Full Name:</label>
+        <input type="name" class="form-control" name="full_name" required formControlName="full_name">
+        <div *ngIf="userForm.get('full_name')?.errors?.['required']" [ngStyle]="{'color':'red'}">Please Enter Valid Full Name.</div>
+      </div>
+    <button type="submit" (click)="saveUser()" class="btn btn-primary">{{id ? 'Update User': 'Create User'}}</button>
+    </div>
+    </form>
+
+
+
+<!-- <h1>{{user.full_name}}</h1> -->

@@ -9,6 +9,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
+import { MockAPIComponent } from './mock-api/mock-api.component';
+import { DetailUserComponent } from './detail-user/detail-user.component';
+import { UserApiFormComponent } from './user-api-form/user-api-form.component';
 
 export const routes: Routes = [
     {path:"home", component:HomeComponent},
@@ -20,5 +23,10 @@ export const routes: Routes = [
     {path:"reactiveform",component:ReactiveformComponent},
     {path:"formbuilder",component:FormBuilderComponent},
     {path:"authentication", component:SignUpComponent},
-    {path:"loginform", component:LoginComponent}
+    {path:"loginform", component:LoginComponent},
+    {path:"mockapi",component:MockAPIComponent},
+    {path:"users/:id",component:DetailUserComponent},
+    {path:"userapiform/:id",component:UserApiFormComponent},
+    {path:"userapiform",component:UserApiFormComponent},
+    {path:"users",component:DetailUserComponent}
 ];

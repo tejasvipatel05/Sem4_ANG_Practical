@@ -17,7 +17,4 @@ export class TemplateDrivenComponent {
     userSPI:0,
     userAge:0
   }
-  processData(){
-
-  }
 }

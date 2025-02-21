@@ -1,7 +1,7 @@
 <div class="container text-center">
     <h1>Form Builder</h1>
 </div>
-<form [formGroup]="StudentForm">
+<!-- <form [formGroup]="StudentForm">
     <div class="ms-4">
         <div class="mb-3">
             <label class="form-label">Student Name:</label>
@@ -78,4 +78,74 @@
         <button type="submit" class="btn btn-primary" [disabled]="StudentForm.invalid">Submit</button>
     </div>
 </form>
-{{StudentForm.value | json }}
+{{StudentForm.value | json }} -->
+
+
+
+<form [formGroup]="StudentForm">
+    <div class="mb-3">
+        <label for="username" class="form-label">*User Name:</label>
+        <input type="text" class="form-control" name="userName" id="username" formControlName="stuName">
+        <span *ngIf="StudentForm.get('stuName')?.errors?.['required'] && StudentForm.get('stuName')?.touched" [ngStyle]="{'color':'red'}">*Enter Name</span>
+        <span *ngIf="StudentForm.get('stuName')?.errors?.['minlength']" [ngStyle]="{'color':'red'}">*Enter valid Name</span>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">*Email address:</label>
+        <input type="email" class="form-control" name="userEmail" id="email" formControlName="stuEmail">
+        <span *ngIf="StudentForm.get('stuEmail')?.errors?.['required'] && StudentForm.get('stuEmail')?.touched" [ngStyle]="{'color':'red'}">*Enter Email</span>
+        <span *ngIf="StudentForm.get('stuEmail')?.errors?.['pattern']" [ngStyle]="{'color':'red'}">*Enter valid Email</span>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">*Password:</label>
+        <input type="password" class="form-control" name="userPassword" id="password" formControlName="stuPassword">
+        <span *ngIf="StudentForm.get('stuPassword')?.errors?.['required'] && StudentForm.get('stuPassword')?.touched" [ngStyle]="{'color':'red'}">*Enter Email</span>
+        <span *ngIf="StudentForm.get('stuPassword')?.errors?.['pattern']" [ngStyle]="{'color':'red'}">*Enter valid password</span>
+    </div>
+    <div class="mb-3">
+        <label for="phoneno" class="form-label">*Contact Number:</label>
+        <input type="text" class="form-control" name="userContact" id="phoneno" formControlName="stuContact">
+        <span *ngIf="StudentForm.get('stuContact')?.errors?.['required'] && StudentForm.get('stuContact')?.touched" [ngStyle]="{'color':'red'}">*Enter contact</span>
+        <span *ngIf="StudentForm.get('stuContact')?.errors?.['pattern']" [ngStyle]="{'color':'red'}">*Enter valid contact</span>
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Age:</label>
+        <input type="number" class="form-control" name="userAge" id="age" formControlName="stuAge">
+        <span *ngIf="StudentForm.get('stuAge')?.touched" [ngStyle]="{'color':'red'}">*Enter age</span>
+        <span *ngIf="StudentForm.get('stuAge')?.errors?.['min']" [ngStyle]="{'color':'red'}">*Enter valid age</span>
+    </div>
+    <div class="mb-3">
+        <label for="spi" class="form-label">SPI:</label>
+        <input type="number" class="form-control" name="userSpi" id="spi" formControlName="stuSpi">
+        <span *ngIf="StudentForm.get('stuSpi')?.touched" [ngStyle]="{'color':'red'}">*Enter spi</span>
+        <span *ngIf="StudentForm.get('stuSpi')?.errors?.['min'] || StudentForm.get('stuSpi')?.errors?.['max']" [ngStyle]="{'color':'red'}">*Enter Spi between 0-10</span>
+    </div>
+    
+    <div formArrayName="stuAddress">
+        <div class="mb-3" *ngFor="let address of StuAddArray.controls; let i=index" [formGroupName]="i">
+            <label for="address" class="form-label">Address {{i+1}}:</label>
+
+            <input type="text" class="form-control" name="userAddress" id="address" formControlName="houseNo">
+            <span *ngIf="address.get('houseNo')?.errors?.['required'] && address.get('houseNo')?.touched" [ngStyle]="{'color':'red'}">*Enter House Number</span>
+
+            <input type="text" class="form-control" formControlName="streetNo">
+            <span *ngIf="address.get('streetNo')?.errors?.['required'] && address.get('streetNo')?.touched" [ngStyle]="{'color':'red'}">*Enter Street Number</span>
+
+            <input type="text" class="form-control" formControlName="city">
+            <span *ngIf="address.get('city')?.errors?.['required'] && address.get('city')?.touched" [ngStyle]="{'color':'red'}">*Enter City</span>
+
+            <input type="text" class="form-control" formControlName="pincode">
+            <span *ngIf="address.get('pincode')?.errors?.['required'] && address.get('pincode')?.touched" [ngStyle]="{'color':'red'}">*Enter Pincode</span>
+            <span *ngIf="address.get('pincode')?.errors?.['pattern']" [ngStyle]="{'color':'red'}">*Enter valid Pincode</span>
+            
+            <button class="btn btn-primary" (click)="removeAddress(i)">Remove</button>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" (click)="addAddress()">Add Address</button>
+    <!-- <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
