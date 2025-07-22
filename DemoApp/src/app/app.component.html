@@ -7,9 +7,34 @@
 <h3>{{num | number:'3.2' }}</h3>
 
 <form action="#">
-  <input type="text" id="data" [value]="title" #data>
-  <h3>{{data.value}}</h3>
-  <button [ngstyle]="{color: host}">Change color</button>
+  <input type="text" id="data" [value]="title" #data> 
+   <h3>{{data.value}}</h3>
+
+  <!-- <input type="text" (input)="displayData($event)">
+  <h3>{{data}}</h3> -->
+
 </form>
 
-<button [disabled] = 'isEnable' >{{title}}</button>
+<button (click)="btnclick()" [ngStyle]="{color: host[counter%8]}" >Change color</button>
+
+<br>
+
+<button [disabled] = 'isEnable' [ngStyle]="{color: demohost}">{{title}}</button>
+
+
+<h3>{{d | date:'H:mm:ss'}}</h3>
+
+<h3>{{d | date:'h:mm:ss a'}}</h3>
+
+<h3>{{d | date:'H:mm:ss.SSS'}}</h3>
+
+<h3>{{d | date:'h:mm:ss.SSS a'}}</h3>
+
+<h3>{{d | date:'H:mm'}}</h3>
+
+<h3>{{d | date:'shortTime'}}</h3>
+
+<h3>{{n | number:'7.3' }}</h3>
+
+<h3>{{n.toExponential(2)}} </h3>
+

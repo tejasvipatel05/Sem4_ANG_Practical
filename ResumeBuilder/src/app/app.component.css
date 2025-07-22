@@ -1,0 +1,10 @@
+.container {
+    border: solid 1.5px skyblue;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container table {
+    justify-content: center;
+    align-items: center;
+}

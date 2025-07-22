@@ -1,0 +1,85 @@
+<div class="container">
+    <h2>Resume Data</h2>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Personal Details: </legend>
+                            <tr>
+                                <td>
+                                    <div class="fName">First Name: </div>
+                                </td>
+                                <td><input type="text" name="fName" placeholder="Enter your First name" (input)="getdata($event)"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="lname">Last Name: </div>
+                                </td>
+                                <td><input type="text" name="lName" placeholder="Enter your Last name" (input)="getdata($event)"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="dbo">Date of Birth: </div>
+                                </td>
+                                <td><input type="date" name="dbo" placeholder="Enter your date of birth" (input)="getdata($event)"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="email">Email: </div>
+                                </td>
+                                <td><input type="email" name="UserEmail" placeholder="Enter your email" (input)="getdata($event)"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mno">Mobile Number: </div>
+                                </td>
+                                <td><input type="number" name="mno" placeholder="Enter your mobile number" (input)="getdata($event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="exp">Experience: </div>
+                                </td>
+                                <td><input type="text" name="exp" placeholder="Enter your experience" (input)="getdata($event)"></td>
+                            </tr>
+                    </fieldset>
+                    <td><p>Name: {{stu.fName}}</p></td>
+                    <tr><td><p>Name: {{stu.fName}}</p></td></tr>
+                    <tr><td><p>Name: {{stu.fName}}</p></td></tr>
+
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Project Details: </legend>
+                            <tr>
+                                <td>
+                                    <div class="protitle">Project Title: </div>
+                                </td>
+                                <td><input type="text" name="protitle" placeholder="Enter your Project Title" (input)="proData($event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="protitle">Project Title: </div>
+                                </td>
+                                <td><input type="text" name="prodes" placeholder="Enter your Project Description"
+                                        (input)="proData($event)"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="protitle">Project Title: </div>
+                                </td>
+                                <td><input type="date" name="prosdtae" placeholder="Enter your Project Starting Date"
+                                        (input)="proData($event)"></td>
+                            </tr>
+                    </fieldset>
+                </td>
+            </tr>
+            <input type="submit" class="submit" name="submit">
+        </table>
+    </form>
+</div>
+
+
+

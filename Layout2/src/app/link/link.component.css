@@ -1,0 +1,8 @@
+a{
+    color: red;
+}
+
+.activelink{
+    color: blue;
+    font-weight: bold;
+}

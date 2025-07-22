@@ -1,5 +1,4 @@
 "use strict";
-// Type Assertion
 let here;
 here = 'This is a statement';
 console.log("Type is: ", typeof (here));

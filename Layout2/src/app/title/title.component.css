@@ -1,0 +1,17 @@
+.titlehead {
+    background-color: black;
+    padding-bottom: 55px;
+    padding-left: 15px;
+    padding-top: 20px;
+    color: white;
+    line-height: 10px;
+    font-size: 5px; 
+    /* font-weight: lighter; */
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.head p {
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
