@@ -12,12 +12,13 @@ import { LoginComponent } from './login/login.component';
 import { MockAPIComponent } from './mock-api/mock-api.component';
 import { DetailUserComponent } from './detail-user/detail-user.component';
 import { UserApiFormComponent } from './user-api-form/user-api-form.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
     {path:"home", component:HomeComponent},
     {path:"resumebuilder", component:ResumeBuilderComponent},
     {path:"array", component:ArrayComponent},
-    {path:"arrayofobject",component:ArrayOfObjectsComponent},
+    {path:"arrayofobject",component:ArrayOfObjectsComponent, canActivate:[authGuard]},
     {path:"directive", component:DirDemoComponent},
     {path:"templatedriven", component:TemplateDrivenComponent},
     {path:"reactiveform",component:ReactiveformComponent},

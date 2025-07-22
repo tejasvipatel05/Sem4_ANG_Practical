@@ -25,6 +25,7 @@ export class LoginComponent {
       
       if(this.loginform.get('username')?.value == localusername && this.loginform.get('password')?.value == localpassword){
         this._router.navigate(['arrayofobject'])
+        // return true;
       }
       else{
         alert("Username or Password not correct !!!")
